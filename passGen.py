@@ -116,7 +116,14 @@ elif userInput == 7:
     print(password)
 
 
+print("Do you wish to store your pass word into a text file? Enter yes or no.")
+fileSave = (input("Enter your option here: "))
 
+filename = (input("What do you wish to name this file? Please include file extension in name. "))
+
+passwordFile = open(filename, "w")
+
+passwordFile.write(password)
 
 
 
