@@ -75,6 +75,8 @@ elif userInput == 8:
     print("You will need to make sure you key file has been moved to the directory.")
     keyFile = (input("Please enter the name of the key file with the .key ext: "))
     loadedKey = encryptor.key_load(keyFile)
+    print(loadedKey)
+    
     encryptedFileName = (input("Please enter the name of the encrypted file: "))
     decryptedFileName = (input("Enter the name you wish for the decrypted file: "))
     encryptor.file_decrypt(loadedKey,encryptedFileName,decryptedFileName)

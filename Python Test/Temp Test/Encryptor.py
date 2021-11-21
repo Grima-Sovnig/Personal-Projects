@@ -13,7 +13,7 @@ class Encryptor():
             mykey.write(key)
             
     def key_load(self, key_name):
-        with open(key_name,'r') as mykey:
+        with open(key_name,'rb') as mykey:
             key = mykey.read()
         return key
     
