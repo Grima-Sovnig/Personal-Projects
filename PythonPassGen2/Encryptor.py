@@ -34,7 +34,10 @@ class Encryptor():
         with open(encrypted_file, 'rb') as file:
             encrypted = file.read()
             
+            
+        print(encrypted) #Test to see if its pulling encrypted data.            
         decrypted = f.decrypt(encrypted)
+        print(decrypted) #Why is data lost here
         
         with open(decrypted_file, 'wb') as file:
             file.write(decrypted)
