@@ -33,5 +33,4 @@ if __name__ == '__main__':
     # Need to spin up a test environment for this.
     # serverAddress = (IP, Port)
     # Open a file for logging purposes
-    log = open(log,"w")
     
