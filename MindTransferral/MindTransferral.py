@@ -33,4 +33,8 @@ if __name__ == '__main__':
     # Need to spin up a test environment for this.
     # serverAddress = (IP, Port)
     # Open a file for logging purposes
+    log = 'log.txt'
+    log = open(log, "w")
+    # socket.connect(serverAddress)
+    # This socket will be used to send commands to the control server.
     
