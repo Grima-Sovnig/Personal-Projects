@@ -8,6 +8,7 @@ import argparse
 import socket
 import sys
 import os
+import pysftp
 
 def grab_ComandLine(): # Function to grab command line arguments.
     parser = argparse.ArgumentParser()
@@ -37,4 +38,8 @@ if __name__ == '__main__':
     log = open(log, "w")
     # socket.connect(serverAddress)
     # This socket will be used to send commands to the control server.
+    log.write(f"Command Line Arguments: ")
     
+    with pysftp.Connection('172.30.111.202', username='somethingwild', password='CallofTheVoid') as sftp:
+        sftp.put('WebServer.py')
+        
